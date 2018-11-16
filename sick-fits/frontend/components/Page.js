@@ -5,6 +5,10 @@ import styled from 'styled-components';
 
 const MyButton = styled.button`
   background: red;
+  font-size: 50px;
+`;
+
+const BigText = styled.span`
   font-size: 100px;
 `;
 
@@ -14,7 +18,9 @@ export default class Page extends Component {
       <div>
         <Meta/>
         <Header/>
-        <MyButton>Click here ... </MyButton>
+        <MyButton>Click
+          <BigText>here ...</BigText>
+        </MyButton>
         {this.props.children}
       </div>
     );
