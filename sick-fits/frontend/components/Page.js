@@ -48,17 +48,20 @@ injectGlobal`
   }
   a {
     text-decoration: none;
+    color: ${theme.black};
   }
 `;
 
 export default class Page extends Component {
   render() {
     return (
-      <div>
-        <Meta/>
-        <Header/>
-        {this.props.children}
-      </div>
+      <ThemeProvider theme={theme}>
+        <StyledPage>
+          <Meta/>
+          <Header/>
+          {this.props.children}
+        </StyledPage>
+      </ThemeProvider>
     );
   }
 }
