@@ -5,16 +5,14 @@ import NProgress from 'nprogress';
 import Nav from './Nav';
 
 Router.onRouteChangeStart = () => {
-  console.log('onRouteChangeStart');
+  NProgress.start();
 }
 Router.onRouteChangeComplete = () => {
-  console.log('onRouteChangeComplete');
+  NProgress.done();
 }
 Router.onRouteChangeError = () => {
-  console.log('onRouteChangeError');
+  NProgress.done();
 }
-
-
 
 const Logo = styled.h1`
   font-size: 4rem;
